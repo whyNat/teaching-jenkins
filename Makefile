@@ -1,7 +1,7 @@
 run_jenkins:
 	docker run -d --name jenkins-wsb \
 		-p 9090:8080 \
-		-v $$(pwd)/jenkins:/var/jenkins_home \
+		-v $$(pwd)/jenkins:/var/jenkins_home:Z \
 		devops/jenkins
 
 bash_jenkins:
